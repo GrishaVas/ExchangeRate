@@ -1,10 +1,12 @@
 ﻿using ExchangeRate.Services.Abstractions;
 using ExchangeRate.Services.Implemintations;
 using ExchangeRate.Services.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExchangeRate.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BanksController : ControllerBase
